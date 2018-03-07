@@ -1,9 +1,7 @@
 #pragma once
 #include <SDL.h>
-#include <SDL_image.h>
 #include <list>
 #include <tuple>
-#include "MediaManager.h"
 
 #define RED 0xFF, 0x00, 0x00, 0xFF
 #define BLUE 0x00, 0x00, 0xFF, 0xFF
@@ -12,7 +10,7 @@
 #define PURPLE 0x55, 0x1A, 0x8B, 0xFF
 #define BLACK 0x00, 0x00, 0x00, 0x00
 
-class WindowManager : public MediaManager
+class WindowManager
 {
 public:
     WindowManager();

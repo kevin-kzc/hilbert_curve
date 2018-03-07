@@ -1,11 +1,9 @@
 #include "WindowManager.h"
-#include "MediaManager.h"
 #undef main
 #include <iostream>
 int main(int argc, char* argv[])
 {
     WindowManager* windowManager = new WindowManager();
-    MediaManager* mediaManager = new MediaManager();
     SDL_mutex* mutex = SDL_CreateMutex();
     if (windowManager->Init())
     {
@@ -87,7 +85,6 @@ int main(int argc, char* argv[])
         std::cout << "error initializating sdl" << std::endl;
         SDL_Delay(5000);
     }
-    mediaManager->destroyImage();
     windowManager->Close();
     return 0;
 }

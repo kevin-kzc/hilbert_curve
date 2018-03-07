@@ -33,11 +33,7 @@ bool WindowManager::Init()
             if (renderer != nullptr)
             {
                 SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
-                int imgFlags = IMG_INIT_PNG;
-                if ((IMG_Init(imgFlags) & imgFlags) != 0)
-                {
-                    retVal = true;
-                }
+                retVal = true;
             }
         }
     }
@@ -50,7 +46,6 @@ void WindowManager::Close()
     SDL_DestroyWindow(window);
     window = nullptr;
     SDL_Quit();
-    IMG_Quit();
 }
 
 bool WindowManager::Update(int reps)
